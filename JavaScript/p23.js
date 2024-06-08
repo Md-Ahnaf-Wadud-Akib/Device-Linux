@@ -14,18 +14,41 @@
 //     console.log(element);
 // }
 
-function productElements(products){
+// function productElements(products){
+//     for(let product of products){
+//         console.log(product);
+//     }
+// }
+
+// let input =[
+//     {name: "Samsung", camera: 50, price: 12000, ram: 8},
+//     {name: "Walton", camera: 13, price: 7000, ram: 2},
+//     {name: "Oppo", camera: 36, price: 92000, ram: 4},
+//     {name: "Nokia", camera: 25, price: 22000, ram: 6},
+//     {name: "iphone", camera: 13, price: 2000, ram: 9}
+// ];
+
+// productElements(input);
+
+function productElement(products, search){
+    let output = [];
     for(let product of products){
-        console.log(product);
+        if(product.name.includes(search) === true){
+            output.push(product);
+        }
+        
     }
+    return output;
 }
 
-let input =[
+let inputElements = [
     {name: "Samsung", camera: 50, price: 12000, ram: 8},
-    {name: "Walton", camera: 13, price: 7000, ram: 2},
+    {name: "Walton phone", camera: 13, price: 7000, ram: 2},
     {name: "Oppo", camera: 36, price: 92000, ram: 4},
     {name: "Nokia", camera: 25, price: 22000, ram: 6},
     {name: "iphone", camera: 13, price: 2000, ram: 9}
 ];
+let abcString = "phone";
 
-productElements(input);
+let result = productElement(inputElements, abcString);
+console.log(result);
