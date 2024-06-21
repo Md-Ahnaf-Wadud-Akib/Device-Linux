@@ -11,8 +11,13 @@
 // let pineapple = document.getElementById("change-text");
 // console.log(pineapple.innerText);
 
-let textInner = document.querySelector(".section-header p");
-console.log(textInner.style.color = "red");
+let sections = document.querySelectorAll("section");
+for(let section of sections){
+    section.style.border = "5px solid gray";
+    section.style.margin = "30px 80px";
+    section.style.padding = "80px";
+}
 
-// abckderfg
+let blueSection = document.getElementById("bg-blue");
+blueSection.style.backgroundColor = "blue";
 
