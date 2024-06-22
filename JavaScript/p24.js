@@ -12,12 +12,17 @@
 // console.log(pineapple.innerText);
 
 let sections = document.querySelectorAll("section");
-for(let section of sections){
-    section.style.border = "5px solid gray";
-    section.style.margin = "30px 80px";
-    section.style.padding = "80px";
+for (let section of sections) {
+  section.style.border = "5px solid gray";
+  section.style.margin = "30px 80px";
+  section.style.padding = "80px";
 }
 
 let blueSection = document.getElementById("bg-blue");
 blueSection.style.backgroundColor = "blue";
 
+let textAlignment = document.getElementById("section2-title");
+
+textAlignment.style.textAlign = "center";
+
+let footerText = document.querySelector("footer h3").style.textAlign = "center";
