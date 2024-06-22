@@ -11,12 +11,12 @@
 // // let pineapple = document.getElementById("change-text");
 // // console.log(pineapple.innerText);
 
-// let sections = document.querySelectorAll("section");
-// for (let section of sections) {
-//   section.style.border = "5px solid gray";
-//   section.style.margin = "30px 80px";
-//   section.style.padding = "80px";
-// }
+let sections = document.querySelectorAll("section");
+for (let section of sections) {
+  section.style.border = "5px solid gray";
+  section.style.margin = "30px 80px";
+  section.style.padding = "80px";
+}
 
 // let blueSection = document.getElementById("bg-blue");
 // blueSection.style.backgroundColor = "blue";
@@ -73,8 +73,8 @@
 
 // Retrieve the element with id "mainBodySection" from the document
 
-
-console.log(document.getElementById("mainBodySection"));
+let nikko = document.getElementById("mainBodySection")
+console.log(nikko);
 
 // Create a <section> element
 let section4 = document.createElement("section");
@@ -104,7 +104,7 @@ ul.appendChild(li3);
 section4.appendChild(ul);
 
 // Append the <section> to the main section with id "mainBodySection"
-// mainSection.appendChild(section4);
+nikko.appendChild(section4);
 
 
 let section5 = document.createElement("section");
@@ -113,9 +113,22 @@ section5.innerHTML = `
 <h1> Hello HTML</h1>
 `
 
-mainSection.appendChild(section5);
+nikko.appendChild(section5);
 
 console.log(mainSection);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
