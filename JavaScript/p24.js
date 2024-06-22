@@ -1,44 +1,44 @@
-// console.log("hello p24.js")
+// // console.log("hello p24.js")
 
-// let paragraph = document.getElementsByTagName("p");
-// console.log(paragraph);
+// // let paragraph = document.getElementsByTagName("p");
+// // console.log(paragraph);
 
-// let liElements = document.getElementsByTagName("li");
-// for(li of liElements){
-//     console.log(li);
+// // let liElements = document.getElementsByTagName("li");
+// // for(li of liElements){
+// //     console.log(li);
+// // }
+
+// // let pineapple = document.getElementById("change-text");
+// // console.log(pineapple.innerText);
+
+// let sections = document.querySelectorAll("section");
+// for (let section of sections) {
+//   section.style.border = "5px solid gray";
+//   section.style.margin = "30px 80px";
+//   section.style.padding = "80px";
 // }
 
-// let pineapple = document.getElementById("change-text");
-// console.log(pineapple.innerText);
+// let blueSection = document.getElementById("bg-blue");
+// blueSection.style.backgroundColor = "blue";
 
-let sections = document.querySelectorAll("section");
-for (let section of sections) {
-  section.style.border = "5px solid gray";
-  section.style.margin = "30px 80px";
-  section.style.padding = "80px";
-}
+// let textAlignment = document.getElementById("section2-title");
 
-let blueSection = document.getElementById("bg-blue");
-blueSection.style.backgroundColor = "blue";
+// textAlignment.style.textAlign = "center";
 
-let textAlignment = document.getElementById("section2-title");
-
-textAlignment.style.textAlign = "center";
-
-let footerText = document.querySelector("footer h3").style.textAlign = "center";
+// let footerText = document.querySelector("footer h3").style.textAlign = "center";
 
 
-let addingLi = document.getElementById("listItems");
+// let addingLi = document.getElementById("listItems");
 
-let createLi = document.createElement("li");
-createLi.innerText = "Wood Apple";
+// let createLi = document.createElement("li");
+// createLi.innerText = "Wood Apple";
 
-addingLi.appendChild(createLi);
+// addingLi.appendChild(createLi);
 
-let flowerList = document.childNodes("flower");
-console.log(flowerList);
-let createFlower = document.createElement("li").innerText = "Water Lily";
-flowerList.appendChild(createFlower);
+// let flowerList = document.childNodes("flower");
+// console.log(flowerList);
+// let createFlower = document.createElement("li").innerText = "Water Lily";
+// flowerList.appendChild(createFlower);
 
 // let mainSection = document.getElementById("mainBodySection");
 
@@ -72,7 +72,9 @@ flowerList.appendChild(createFlower);
 // Corrected and annotated code
 
 // Retrieve the element with id "mainBodySection" from the document
-let mainSection = document.getElementById("mainBodySection");
+
+
+console.log(document.getElementById("mainBodySection"));
 
 // Create a <section> element
 let section4 = document.createElement("section");
@@ -102,7 +104,7 @@ ul.appendChild(li3);
 section4.appendChild(ul);
 
 // Append the <section> to the main section with id "mainBodySection"
-mainSection.appendChild(section4);
+// mainSection.appendChild(section4);
 
 
 let section5 = document.createElement("section");
@@ -111,9 +113,9 @@ section5.innerHTML = `
 <h1> Hello HTML</h1>
 `
 
+mainSection.appendChild(section5);
 
-
-
+console.log(mainSection);
 
 
 
