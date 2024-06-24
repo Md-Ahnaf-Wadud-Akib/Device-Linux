@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete Comment</title>
+  </head>
+  <body>
+    <h1 id="information">Hello World</h1>
+    <input type="text" name="" id="input-text" />
+    <button disabled id="deleteInfo">Delete</button>
+
+    <script>
+      let information = document.getElementById("information");
+      let inputText = document.getElementById("input-text");
+      let deleteButton = document.getElementById("deleteInfo");
+
+      inputText.addEventListener("keyup", function(event){
+        let text0 = event.target.value;
+        if(text0 === "delete"){
+            deleteButton.removeAttribute("disabled");
+        }
+        else{
+            deleteButton.setAttribute("disabled", true);
+        }
+      })
+
+      deleteButton.addEventListener("click", function () {
+        information.style.display = "none";
+      });
+    </script>
+  </body>
+</html>
