@@ -71,16 +71,35 @@ function addNewComment() {
 let sButton = document.getElementById("s-button");
 sButton.addEventListener("click", addNewComment);
 
+// let deleteButton = document.getElementById("delete-button");
+// let deleteButtonTextMatcher = document.getElementById("text-delete");
+
+// function abc() {
+//   commentArea1 = document.getElementById("comment-section");
+//   lastComment = commentArea1.lastChild;
+//   console.log(lastComment);
+// };
+// abc();
+
+// commentArea1 = document.getElementById("comment-section");
+// lastComment = commentArea1.lastChild;
+// console.log(lastComment.innerText);
+
+function deleteText() {
+  titleText.style.display = "none";
+}
+function enableButton(event){
+  let matchBoxText = event.target.value;
+  if(matchBoxText === "delete"){
+    deleteButton.removeAttribute("disabled");
+  }
+  else{
+    deleteButton.setAttribute("disabled", true);
+  }
+}
+
+let titleText = document.getElementById("title-text");
+let matchingBox = document.getElementById("text-delete");
+matchingBox.addEventListener("keyup", enableButton);
 let deleteButton = document.getElementById("delete-button");
-let deleteButtonTextMatcher = document.getElementById("text-delete");
-
-function abc() {
-  commentArea1 = document.getElementById("comment-section");
-  lastComment = commentArea1.lastChild;
-  console.log(lastComment);
-};
-abc();
-
-commentArea1 = document.getElementById("comment-section");
-lastComment = commentArea1.lastChild;
-console.log(lastComment.innerText);
+deleteButton.addEventListener("click", deleteText);
