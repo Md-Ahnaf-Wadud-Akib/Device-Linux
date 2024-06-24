@@ -10,6 +10,18 @@
     <input type="text" name="" id="input-text" />
     <button disabled id="deleteInfo">Delete</button>
 
+    <section>
+      <h1>Event Bubble</h1>
+      <ul class="list-container">
+        <li class="list-items">Lorem, ipsum dolor.</li>
+        <li class="list-items">Qui, sit ratione!</li>
+        <li class="list-items">Exercitationem, sapiente modi?</li>
+        <li class="list-items">Eos, magni iusto.</li>
+        <li class="list-items">Dolores, autem perspiciatis.</li>
+        <li class="list-items">Vitae, officia consectetur?</li>
+      </ul>
+    </section>
+
     <script>
       let information = document.getElementById("information");
       let inputText = document.getElementById("input-text");
@@ -28,6 +40,15 @@
       deleteButton.addEventListener("click", function () {
         information.style.display = "none";
       });
+
+
+      let listContainer = document.getElementById("list-container");
+      let listItems = document.getElementsByClassName("list-items");
+      for(let item of listItems){
+        item.addEventListener("click", function(){
+          console.log(item.innerText);
+        })
+      }
     </script>
   </body>
 </html>
