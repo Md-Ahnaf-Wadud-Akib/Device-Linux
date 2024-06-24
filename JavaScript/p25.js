@@ -56,16 +56,12 @@ submitText.addEventListener("click", text);
 
 
 function textDisplay(){
-    defaultText.innerText = inputBox.value;
+    textDefault.innerText = inputBox.value;
 }
 let inputBox = document.getElementById("input-box");
-
-
-
-let defaultText = document.getElementById("default-text");
-
-let submitButton = document.getElementById("submit-button");
-submitButton.addEventListener("click", textDisplay);
+let textDefault = document.getElementById("default-text");
+let buttonForSubmission = document.getElementById("submit-button");
+buttonForSubmission.addEventListener("click", textDisplay);
 
 
 
