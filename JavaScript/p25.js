@@ -70,3 +70,17 @@ function addNewComment() {
 
 let sButton = document.getElementById("s-button");
 sButton.addEventListener("click", addNewComment);
+
+let deleteButton = document.getElementById("delete-button");
+let deleteButtonTextMatcher = document.getElementById("text-delete");
+
+function abc() {
+  commentArea1 = document.getElementById("comment-section");
+  lastComment = commentArea1.lastChild;
+  console.log(lastComment);
+};
+abc();
+
+commentArea1 = document.getElementById("comment-section");
+lastComment = commentArea1.lastChild;
+console.log(lastComment.innerText);
