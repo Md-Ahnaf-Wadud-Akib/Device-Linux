@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Unordered List</h1>
+    <ul id="list-container">
+      <li class="list-items">Lorem, ipsum.</li>
+      <li class="list-items">Rerum, illo!</li>
+      <li class="list-items">Necessitatibus, incidunt?</li>
+      <li class="list-items">Dolor, iusto.</li>
+      <li class="list-items">Quam, sunt?</li>
+      <li class="list-items">Voluptatem, blanditiis.</li>
+    </ul>
+
+    <button id="add-item">New Item</button>
+
+    <script>
+        let listItems = document.getElementsByClassName("list-items");
+        for (let listItem of listItems) {
+          listItem.addEventListener("click", function (event) {
+            event.target.parentNode.removeChild(event.target);
+          });
+        }
+
+      
+      let addNewItem = document.getElementById("add-item");
+      addNewItem.addEventListener("click", function () {
+        let newLi = document.createElement("li");
+        newLi.innerText = "Hello World";
+        newLi.classList = "list-items";
+        let listContainer = document.getElementById("list-container");
+        listContainer.appendChild(newLi);
+      });
+    </script>
+  </body>
+</html>

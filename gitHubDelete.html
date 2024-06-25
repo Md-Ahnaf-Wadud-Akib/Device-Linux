@@ -20,6 +20,7 @@
         <li class="list-items">Dolores, autem perspiciatis.</li>
         <li class="list-items">Vitae, officia consectetur?</li>
       </ul>
+      <button id="new-item">Add New Item</button>
     </section>
 
     <script>
@@ -27,28 +28,34 @@
       let inputText = document.getElementById("input-text");
       let deleteButton = document.getElementById("deleteInfo");
 
-      inputText.addEventListener("keyup", function(event){
+      inputText.addEventListener("keyup", function (event) {
         let text0 = event.target.value;
-        if(text0 === "delete"){
-            deleteButton.removeAttribute("disabled");
+        if (text0 === "delete") {
+          deleteButton.removeAttribute("disabled");
+        } else {
+          deleteButton.setAttribute("disabled", true);
         }
-        else{
-            deleteButton.setAttribute("disabled", true);
-        }
-      })
+      });
 
       deleteButton.addEventListener("click", function () {
         information.style.display = "none";
       });
 
-
       let listContainer = document.getElementById("list-container");
       let listItems = document.getElementsByClassName("list-items");
-      for(let item of listItems){
-        item.addEventListener("click", function(){
-          console.log(item.innerText);
-        })
+      for (let item of listItems) {
+        item.addEventListener("click", function (event) {
+          event.target.parentNode.removeChild(event.target);
+        });
       }
+      let newItem = document.getElementById("new-item");
+      
+      newItem.addEventListener("click", function(){
+        let li = document.createElement("li");
+        let input = 'New text Added';
+        li.innerText = input;
+        listContainer.appendChild(li);
+      })
     </script>
   </body>
 </html>
