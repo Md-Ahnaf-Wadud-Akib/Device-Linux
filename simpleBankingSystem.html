@@ -3,21 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Banking System</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <header>
-      <h1>Welcome to the banking system</h1>
+      <h1 class="text-4xl text-center pt-9">Welcome to the banking system</h1>
     </header>
-    <main>
-      <section>
-        
+    <main style="padding-left: 230px; padding-top: 30px">
+      <section class="bg-emerald-100 pb-9 w-9/12 text-center">
+        <h2 class="text-2xl text-center pt-5">
+          Please enter your user name and password
+        </h2>
+
+        <input
+          class="block w-4/5 mx-20 px-2"
+          type="email"
+          name=""
+          id=""
+          placeholder="Enter your mail address"
+        />
+        <input
+          class="block w-4/5 mx-20 mt-2 px-2"
+          type="password"
+          name=""
+          id=""
+          placeholder="Enter your password"
+        />
+        <button
+          class="bg-orange-500 hover:bg-sky-700 text-slate-100 px-9 py-2 rounded-md mt-5"
+        >
+          Submit
+        </button>
       </section>
     </main>
 
-
-    
     <script src="JavaScript/simpleBankingSystem.js"></script>
   </body>
 </html>
