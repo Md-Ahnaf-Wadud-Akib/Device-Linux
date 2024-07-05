@@ -12,3 +12,14 @@ submit.addEventListener("click", function () {
     alert("Wrong user name or password");
   }
 });
+
+let operation = document.getElementById("abcButton");
+operation.addEventListener("click", function () {
+  let textArea = document.getElementById("textAbc");
+  let show = document.getElementById("out-box");
+  show.value = textArea.value;
+
+  
+});
+console.log(operation);
+
