@@ -15,14 +15,15 @@ withdrawButton.addEventListener("click", function () {
 
   // total amount minus
   let currentWithdrawFloat = parseFloat(currentWithdraw);
+  
+  // getting total amount 
   let totalAmount = document.getElementById("total-amount");
   let totalAmountFloat = parseFloat(totalAmount.innerText);
   if (currentWithdrawFloat < totalAmountFloat) {
     let currentTotalAmount = totalAmountFloat - currentWithdrawFloat;
 
     totalAmount.innerText = currentTotalAmount;
-  }
-  else{
+  } else {
     alert("Not enough money to withdraw");
   }
 });
