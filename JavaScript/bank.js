@@ -8,22 +8,19 @@ withdrawButton.addEventListener("click", function () {
   let previousShowWithdraw = showWithdraw.innerText;
   let previousShowWithdrawFloat = parseFloat(previousShowWithdraw);
 
+  withdrawBox.value = "";
+
+  let totalAmountField = document.getElementById("total-amount");
+  let totalAmountString = totalAmountField.innerText;
+  let totalAmountNumber = parseFloat(totalAmountString);
+
+  if(newWithdrawValueFloat > totalAmountNumber){
+    alert("error");
+    return;
+  }
   let currentWithdraw = previousShowWithdrawFloat + newWithdrawValueFloat;
   showWithdraw.innerText = currentWithdraw;
 
-  withdrawBox.value = "";
-
-  // total amount minus
-  let currentWithdrawFloat = parseFloat(currentWithdraw);
-  
-  // getting total amount 
-  let totalAmount = document.getElementById("total-amount");
-  let totalAmountFloat = parseFloat(totalAmount.innerText);
-  if (currentWithdrawFloat < totalAmountFloat) {
-    let currentTotalAmount = totalAmountFloat - currentWithdrawFloat;
-
-    totalAmount.innerText = currentTotalAmount;
-  } else {
-    alert("Not enough money to withdraw");
-  }
-});
+  let totalAmountLeft = totalAmountNumber- newWithdrawValueFloat;
+  totalAmountField.innerText = totalAmountLeft;
+})
