@@ -4,6 +4,11 @@ withdrawButton.addEventListener("click", function () {
   let withdrawValue = withdrawBox.value;
   let newWithdrawValueFloat = parseFloat(withdrawValue);
 
+  if (isNaN(newWithdrawValueFloat)) {
+    alert("please enter a valid number");
+    return;
+  }
+
   let showWithdraw = document.getElementById("show-withdraw-value");
   let previousShowWithdraw = showWithdraw.innerText;
   let previousShowWithdrawFloat = parseFloat(previousShowWithdraw);
@@ -14,13 +19,13 @@ withdrawButton.addEventListener("click", function () {
   let totalAmountString = totalAmountField.innerText;
   let totalAmountNumber = parseFloat(totalAmountString);
 
-  if(newWithdrawValueFloat > totalAmountNumber){
+  if (newWithdrawValueFloat > totalAmountNumber) {
     alert("error");
     return;
   }
   let currentWithdraw = previousShowWithdrawFloat + newWithdrawValueFloat;
   showWithdraw.innerText = currentWithdraw;
 
-  let totalAmountLeft = totalAmountNumber- newWithdrawValueFloat;
+  let totalAmountLeft = totalAmountNumber - newWithdrawValueFloat;
   totalAmountField.innerText = totalAmountLeft;
-})
+});

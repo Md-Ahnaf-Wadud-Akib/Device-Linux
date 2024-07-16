@@ -2,6 +2,10 @@ document.getElementById("deposit-btn").addEventListener("click", function(){
     let depositField = document.getElementById("deposit-field");
     let depositNumber = parseFloat(depositField.value);
     
+    if(isNaN(depositNumber)){
+        alert("please enter a valid number");
+        return;
+    }
 
     let showDepositField = document.getElementById("show-deposit-field");
     let showDepositNumber = parseFloat(showDepositField.innerText);
