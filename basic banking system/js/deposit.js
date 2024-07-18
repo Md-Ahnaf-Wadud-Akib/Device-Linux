@@ -1,4 +1,4 @@
-document.body.style.backgroundColor = "black";
+// document.body.style.backgroundColor = "black";
 
 let depositSubBtn = document.getElementById("deposit-sub-btn");
 depositSubBtn.addEventListener("click", function () {
