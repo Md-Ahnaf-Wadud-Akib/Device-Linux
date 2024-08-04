@@ -1,0 +1,30 @@
+* {
+  margin: 0px 80px;
+}
+.display-block {
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  padding: 3px 10px;
+  width: 200px;
+}
+
+.flex-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.css-header {
+  background-color: #7390b8;
+  padding: 20px 0px;
+  margin-top: 130px;
+}
+.css-main {
+  background-color: #7fa1c3;
+  padding: 50px 0px;
+}
