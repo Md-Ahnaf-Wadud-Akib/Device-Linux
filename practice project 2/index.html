@@ -19,11 +19,39 @@
         <h1 class="text-lg">Geometry Calculator</h1>
         <h4 class="text-xs">Measure the geometry</h4>
       </div>
-      <button class="px-9 bg-sky-300 text-sm rounded-lg text-black">Blog</button>
+      <button class="px-9 bg-sky-300 text-sm rounded-lg text-black">
+        Blog
+      </button>
     </header>
-    <main class="mx-9 mt-4">
+    <main class="mx-16 mt-8">
+      <!-- card section -->
+
       <section class="flex">
-        <div class="flex-1 grid grid-cols-2">
+        <!-- card div -->
+
+        <div class="flex-1 grid grid-cols-2 gap-y-9">
+          <!-- card-1 -->
+
+          <div class="card card-compact bg-base-100 w-96 shadow-xl">
+            <figure>
+              <img src="photos/triangle.png" alt="Triangle" />
+            </figure>
+            <div class="card-body">
+              <h2 class="text-center text-xl">Triangle</h2>
+              <p class="text-center">Area (A) = 0.5 X b X h</p>
+              <div>
+                <input class="w-24 px-4 py-2" type="text" placeholder="b"> cm 
+                <input class="w-24 px-4 py-2" type="text" placeholder="h"> cm
+              </div>
+              <div class="card-actions justify-center">
+                <h1>Area: <span>00</span> cm<sup>2</sup></h1>
+                <button class="btn btn-primary w-full">Calculate</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 2 -->
+
           <div class="card card-compact bg-base-100 w-96 shadow-xl">
             <figure>
               <img
@@ -39,6 +67,9 @@
               </div>
             </div>
           </div>
+
+          <!-- card 3 -->
+
           <div class="card card-compact bg-base-100 w-96 shadow-xl">
             <figure>
               <img
@@ -54,21 +85,9 @@
               </div>
             </div>
           </div>
-          <div class="card card-compact bg-base-100 w-96 shadow-xl">
-            <figure>
-              <img
-                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                alt="Shoes"
-              />
-            </figure>
-            <div class="card-body">
-              <h2 class="card-title">Shoes!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div class="card-actions justify-end">
-                <button class="btn btn-primary">Buy Now</button>
-              </div>
-            </div>
-          </div>
+
+          <!-- card 4 -->
+
           <div class="card card-compact bg-base-100 w-96 shadow-xl">
             <figure>
               <img
@@ -85,8 +104,8 @@
             </div>
           </div>
         </div>
-        <div class="w-96 border-slate-100 mt-4">
-          <h1>Area</h1>
+        <div class="w-96 border border-gray-400 rounded-2xl">
+          <h1 class="text-lg text-white text-center pt-6">Area Calculations</h1>
         </div>
       </section>
     </main>
