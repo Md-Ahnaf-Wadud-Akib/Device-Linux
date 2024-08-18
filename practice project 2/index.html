@@ -40,12 +40,12 @@
               <h2 class="text-center text-xl">Triangle</h2>
               <p class="text-center">Area (A) = 0.5 X b X h</p>
               <div>
-                <input class="w-24 px-4 py-2" type="text" placeholder="b"> cm 
-                <input class="w-24 px-4 py-2" type="text" placeholder="h"> cm
+                <input id="base" class="w-24 px-4 py-2" type="text" placeholder="b"> cm 
+                <input id="height" class="w-24 px-4 py-2" type="text" placeholder="h"> cm
               </div>
               <div class="card-actions justify-center">
-                <h1>Area: <span>00</span> cm<sup>2</sup></h1>
-                <button class="btn btn-primary w-full">Calculate</button>
+                <h1>Area: <span id="display-value">00</span> cm<sup>2</sup></h1>
+                <button id="cal-btn" class="btn btn-primary w-full">Calculate</button>
               </div>
             </div>
           </div>
@@ -109,5 +109,9 @@
         </div>
       </section>
     </main>
+
+    <!-- script -->
+     <script src="js/utilities.js"></script>
+     <script src="js/triangle.js"></script>
   </body>
 </html>
