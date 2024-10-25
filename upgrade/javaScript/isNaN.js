@@ -22,10 +22,26 @@
 
 // console.log(something);
 
-function multiply(num1, num2) {
-  return num1 * num2;
+// function multiply(num1, num2) {
+//   return num1 * num2;
+// }
+// let input1 = 2;
+// input2 = 3;
+// const result = multiply(2, 3);
+// console.log(`The multiplication of ${input1} and ${input2} is: ${result}`);
+
+// const arrowFunction = (profile) => profile.age;
+
+// const nikko = {
+//     name: "Nikko",
+//     age: 4,
+//     vaccination: "Done"
+// }
+
+// console.log(arrowFunction(nikko));
+
+const arrowFunction = () => {
+    console.log("Nikko");
 }
-let input1 = 2;
-input2 = 3;
-const result = multiply(2, 3);
-console.log(`The multiplication of ${input1} and ${input2} is: ${result}`);
+arrowFunction();
+// console.log(arrowFunction());
