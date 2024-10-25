@@ -40,8 +40,11 @@
 
 // console.log(arrowFunction(nikko));
 
-const arrowFunction = () => {
-    console.log("Nikko");
-}
-arrowFunction();
-// console.log(arrowFunction());
+// const arrowFunction = () => {
+//     console.log("Nikko");
+// }
+// arrowFunction();
+// // console.log(arrowFunction());
+
+const thirdValue = (array) => array[2];
+console.log(thirdValue([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]));
