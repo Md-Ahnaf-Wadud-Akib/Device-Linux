@@ -17,9 +17,21 @@
 // console.log(`The max value of ${abcArray} is: ${result}`);
 
 
-const ahnaf = ["mango", "potato", "spice", "Singara"];
-const akib = ["chicken", "rice"];
+// const ahnaf = ["mango", "potato", "spice", "Singara"];
+// const akib = ["chicken", "rice"];
 
-// Combine both arrays using the spread operator
-const ahnafAkib = [...ahnaf, ...akib];
-console.log(ahnafAkib);
+// // Combine both arrays using the spread operator
+// const ahnafAkib = [...ahnaf, ...akib];
+// console.log(ahnafAkib);
+
+
+let abcObject = {
+    name: "Nikko",
+    age: 4,
+    color: "White",
+    vaccine: "Yes"
+};
+
+const obkeys = Object.values(abcObject);
+console.log(obkeys);
+console.log(abcObject);
