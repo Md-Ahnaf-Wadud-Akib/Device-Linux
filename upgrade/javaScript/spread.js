@@ -16,7 +16,6 @@
 // const result = maxValue(abcArray);
 // console.log(`The max value of ${abcArray} is: ${result}`);
 
-
 // const ahnaf = ["mango", "potato", "spice", "Singara"];
 // const akib = ["chicken", "rice"];
 
@@ -24,14 +23,26 @@
 // const ahnafAkib = [...ahnaf, ...akib];
 // console.log(ahnafAkib);
 
-
 let abcObject = {
-    name: "Nikko",
-    age: 4,
-    color: "White",
-    vaccine: "Yes"
+  name: "Nikko",
+  age: 4,
+  color: "White",
+  vaccine: "Yes",
 };
 
 const obkeys = Object.values(abcObject);
-console.log(obkeys);
-console.log(abcObject);
+// console.log(obkeys);
+// console.log(abcObject);
+
+const twoArray = Object.entries(abcObject);
+console.log(twoArray);
+
+function array2Dkeys(inputArray) {
+    for(i=0;i<=inputArray.length;i++){
+        let key = inputArray[i][0];
+        let value = inputArray[i][1];
+    }
+    console.log(`${key}: ${value}`);
+}
+let result = array2Dkeys(twoArray);
+console.log(result);
