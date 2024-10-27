@@ -46,7 +46,20 @@ function multiply(inputArray) {
 let doubleIt = (num) => num * 2;
 
 let test2 = [23, 56, 89, 85, 42];
+let output3 = test2.map((num) => num * 2);
+// console.log(output3);
 let output2 = test2.map(doubleIt);
 // console.log(output2);
 let output = multiply(test2);
 // console.log(output);
+
+let names = ["Ahnaf", "Akib", "Fahmida", "Rahman"];
+// console.log(names.map((name) => name.length));
+
+// console.log(test2.forEach((n) => console.log(n)));
+
+const filter2 = test2.filter(n => n==57);
+// console.log(filter2);
+
+const filterName = names.filter(p => p.length%2 === 1);
+console.log(filterName)
