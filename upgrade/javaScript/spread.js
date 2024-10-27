@@ -47,10 +47,48 @@
 // let result = array2Dkeys(twoArray);
 // console.log(result);
 
-let price = n => n.length;
+// let price = n => n.length;
 
-const productPrice = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-console.log(price(productPrice));
-for(price of productPrice){
-    console.log(price);
+// const productPrice = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// console.log(price(productPrice));
+// for(price of productPrice){
+//     console.log(price);
+// }
+
+let abcObject = [
+  {
+    name: "Ahnaf Akib",
+    age: 26,
+    education: "B. Sc in CSE",
+  },
+  {
+    name: "Fahmida Rahman",
+    age: 26,
+    education: "B. Sc in English Literature",
+  },
+
+  {
+    name: "Humayra Jannat",
+    age: 25,
+    education: "Department Of Botany",
+  },
+];
+
+
+// console.log(abcObject[2].name);
+
+let name1 = "Ahnaf Akib";
+for(character of name1){
+console.log(character);
 }
+
+let test1 = {
+    name: "Ahnaf Akib",
+    age: 26,
+    education: "B. Sc in CSE",
+  }
+
+  for(let keys in test1){
+    let value = test1[keys];
+    console.log(keys, value);
+  }
