@@ -32,4 +32,21 @@ let product = {
   ],
 };
 
-console.log(product.productList[1].name);
+// console.log(product.productList[1].name);
+// console.log(product.productList[1].weight);
+function multiply(inputArray) {
+  let result = [];
+  for (i = 0; i <= inputArray.length - 1; i++) {
+    let element = inputArray[i];
+    result.push(element * 2);
+  }
+  return result;
+}
+
+let doubleIt = (num) => num * 2;
+
+let test2 = [23, 56, 89, 85, 42];
+let output2 = test2.map(doubleIt);
+// console.log(output2);
+let output = multiply(test2);
+// console.log(output);
