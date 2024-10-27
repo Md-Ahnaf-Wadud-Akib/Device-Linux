@@ -47,8 +47,10 @@
 // let result = array2Dkeys(twoArray);
 // console.log(result);
 
-const price = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let price = n => n.length;
 
-for(productPrice of price){
-    console.log(productPrice);
+const productPrice = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log(price(productPrice));
+for(price of productPrice){
+    console.log(price);
 }
