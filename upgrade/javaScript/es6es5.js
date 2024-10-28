@@ -62,4 +62,4 @@ const filter2 = test2.filter(n => n==57);
 // console.log(filter2);
 
 const filterName = names.filter(p => p.length%2 === 1);
-console.log(filterName)
+// console.log(filterName)
