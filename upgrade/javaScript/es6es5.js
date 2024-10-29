@@ -58,8 +58,20 @@ let names = ["Ahnaf", "Akib", "Fahmida", "Rahman"];
 
 // console.log(test2.forEach((n) => console.log(n)));
 
-const filter2 = test2.filter(n => n==57);
+const filter2 = test2.filter((n) => n == 57);
 // console.log(filter2);
 
-const filterName = names.filter(p => p.length%2 === 1);
+const filterName = names.filter((p) => p.length % 2 === 1);
 // console.log(filterName)
+
+class Product {
+  country = "Bangladesh";
+  speak(text) {
+    console.log(`Tui k ami k ${text}`);
+  }
+}
+
+let product1 = new Product();
+// console.log(product1);
+
+console.log(product1.speak("razakar razakar"));
