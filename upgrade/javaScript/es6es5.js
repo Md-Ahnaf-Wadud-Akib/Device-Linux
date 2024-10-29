@@ -74,4 +74,17 @@ class Product {
 let product1 = new Product();
 // console.log(product1);
 
-console.log(product1.speak("razakar razakar"));
+// console.log(product1.speak("razakar razakar"));
+
+class Teacher{
+  constructor(sir,sub){
+    this.name = sir;
+    this.subject = sub;
+  }
+lecture(){
+  console.log(`Pikachu is teaching Pokemon`);
+}
+}
+
+let rashid = new Teacher("Rashid", "English");
+console.log(rashid);
