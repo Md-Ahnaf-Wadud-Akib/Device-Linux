@@ -16,4 +16,5 @@ const selected = players.filter((p) => p > 50);
 
 const cats = [2, 3, 4, 5, 6, 7, 8, 9];
 
-console.log(cats.map((p) => p));
+// console.log(cats.map((p) => p));
+console.log(cats.filter((c) => c % 2 !== 0));
