@@ -26,7 +26,7 @@ function sumOfArray(inputArray2) {
 
 let abcArray2 = [2, 3, 5, 9, 10];
 let result2 = sumOfArray(abcArray2);
-// console.log(`The result is: ${result2}`);
+console.log(`The result is: ${result2}`);
 
 function largestNumber(inputArray3) {
   let value = 0;
