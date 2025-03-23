@@ -1,0 +1,61 @@
+/* Open Sans */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Raleway */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  background-color: #fdfdfd;
+}
+.raleway {
+  font-family: "Raleway", sans-serif;
+}
+
+.open-sans {
+  font-family: "Open Sans", sans-serif;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-shadow {
+  box-shadow: 0.1px 3px 8px #6f6f6f;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 120px;
+}
+
+.card1 {
+  background-image: url(images/img1.jpg);
+  background-position: center;
+  width: 300px;
+  background-repeat: no-repeat;
+  box-shadow: 0.1px 3px 8px #6f6f6f;
+}
+
+.card2 {
+  background-color: #6f6f6f;
+  width: 400px;
+  height: 200px;
+  background-repeat: no-repeat;
+  box-shadow: 0.1px 3px 8px #6f6f6f;
+  margin-bottom: 30px;
+}
+
+.card3 {
+  background-color: #6f6f6f;
+  width: 400px;
+  height: 200px;
+  background-repeat: no-repeat;
+  box-shadow: 0.1px 3px 8px #6f6f6f;
+}
+
+.list-style {
+  list-style: none;
+}

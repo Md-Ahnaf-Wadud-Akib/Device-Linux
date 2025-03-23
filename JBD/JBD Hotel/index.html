@@ -1,11 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JBD Hotel</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="bg-[#6F6F6F]">
+        <!-- contact and social link section -->
+        <section
+          class="flex justify-between px-[50px] pt-[15px] pb-[15px] border border-b-white"
+        >
+          <!-- Contact -->
+          <div class="flex">
+            <!-- phone -->
+            <div class="flex">
+              <img
+                class="w-[20px] mr-[10px]"
+                src="images/phone-removebg-preview.png"
+                alt=""
+              />
+              <p>+01 (977) 2599 12</p>
+            </div>
+
+            <!-- email -->
+            <div class="flex">
+              <img
+                class="w-[20px] ml-[30px] mr-[10px]"
+                src="images/mail-removebg-preview.png"
+                alt=""
+              />
+              <p>+01 (977) 2599 12</p>
+            </div>
+
+            <!-- location -->
+            <div class="flex">
+              <img
+                class="w-[20px] ml-[30px] mr-[10px]"
+                src="images/location.png"
+                alt=""
+              />
+              <p>3146 Koontz Lane, California</p>
+            </div>
+          </div>
+
+          <!-- Icons -->
+          <div class="flex">
+            <!-- Social Links -->
+            <div class="flex">
+              <img
+                class="w-[20px] mr-[10px]"
+                src="images/facebook.png"
+                alt=""
+              />
+              <img class="w-[20px] mr-[10px]" src="images/twitter.png" alt="" />
+              <img
+                class="w-[20px] mr-[10px]"
+                src="images/instagram-removebg-preview.png"
+                alt=""
+              />
+              <img
+                class="w-[20px] mr-[10px]"
+                src="images/linkedIn.png"
+                alt=""
+              />
+            </div>
+
+            <!-- Search -->
+            <div class="px-[10px]">
+              <img
+                class="w-[20px]"
+                src="images/search-removebg-preview.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </section>
+
+        <!-- menu section -->
+        <section class="flex justify-between py-[10px] px-[50px]">
+          <!-- Site icon -->
+          <div class="flex items-center">
+            <img src="images/logo.png" alt="" />
+          </div>
+
+          <!-- site menu -->
+          <div class="flex justify-center items-center list-style">
+            <li class="pr-5">HOME</li>
+            <li class="pr-5">SERVICES</li>
+            <li class="pr-5">BLOG</li>
+            <li class="pr-5">ROOM TYPE</li>
+            <li class="pr-5">GALLERY</li>
+            <li class="pr-5">ABOUT US</li>
+            <li class="pr-5">CONTACT US</li>
+          </div>
+
+          <!-- Book Now button -->
+          <div class="">
+            <button
+              class="bg-[#F56960] hover:bg-[#2C75BA] px-[30px] py-[10px] text-[15px] text-[#ffffff]"
+            >
+              Book Now
+            </button>
+          </div>
+        </section>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="bg-[#6f6f6f] bg-center min-h-[600px]">
+        <div class="flex flex-col justify-center items-center h-screen">
+          <h1 class="raleway text-[80px] font-black text-[#ffffff] mb-[-30px]">
+            TRAVELING AROUND
+          </h1>
+          <h1 class="raleway text-[80px] font-black text-[#ffffff]">
+            THE WORLD
+          </h1>
+
+          <p
+            class="open-sans text-[15px] px-[22%] text-[#ffffff] text-center pt-[20px]"
+          >
+            Taciti quasi, sagittis excepteur hymenaeos, id temporibus hic
+            proident ullam, eaque donec delectus tempor consectetur nunc, purus
+            congue? Rem volutpat sodales! Mollit. Minus exercitationem wisi.
+          </p>
+
+          <button
+            class="bg-[#F56960] px-[30px] py-[10px] text-[15px] text-[#ffffff] mt-[50px] hover:bg-[#2C75BA]"
+          >
+            CONTINUE READING
+          </button>
+        </div>
+      </section>
+
+      <!-- Search section -->
+      <section>
+        <div
+          class="flex justify-between align-middle items-center mx-[120px] my-[30px] bg-[#ffffff] px-[50px] py-[40px] search-shadow"
+        >
+          <div>
+            <h1 class="pb-[8px] text-[15px] open-sans">Search Destination*</h1>
+            <input
+              class="bg-[#F8F8F8] py-[10px] px-[10px] text-[14px] open-sans"
+              type="text"
+              name=""
+              id=""
+              placeholder="Enter Destination"
+            />
+          </div>
+
+          <div>
+            <h1 class="pb-[8px] text-[15px] open-sans">Pax Number*</h1>
+            <input
+              class="bg-[#F8F8F8] py-[10px] px-[10px] text-[14px] open-sans"
+              type="text"
+              name=""
+              id=""
+              placeholder="No. of People"
+            />
+          </div>
+
+          <div>
+            <h1 class="pb-[8px] text-[15px] open-sans">Check-in Date*</h1>
+            <input
+              class="bg-[#F8F8F8] py-[10px] px-[10px] text-[14px] open-sans"
+              type="date"
+              name=""
+              id=""
+              placeholder=""
+            />
+          </div>
+
+          <div>
+            <h1 class="pb-[8px] text-[15px] open-sans">Checkout Date*</h1>
+            <input
+              class="bg-[#F8F8F8] py-[10px] px-[10px] text-[14px] open-sans"
+              type="date"
+              name=""
+              id=""
+              placeholder=""
+            />
+          </div>
+
+          <div>
+            <button
+              class="items-center bg-[#F56960] hover:bg-[#2C75BA] px-[30px] py-[10px] text-[15px] text-[#ffffff] mt-[50px]"
+            >
+              INQUIRE NOW
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- POPULAR DESTINATION -->
+      <section class="px-[120px]">
+        <div class="flex justify-between items-center">
+          <div class="w-[1800px]">
+            <h6 class="text-[#f56960] raleway text-[15px] font-bold">
+              __________ POPULAR DESTINATION
+            </h6>
+            <p class="text-[48px] raleway font-black text-[#101F46]">
+              TOP NOTCH DESTINATION
+            </p>
+          </div>
+          <div>
+            <p class="open-sans text-[15px]">
+              Aperiam sociosqu urna praesent, tristique, corrupti condimentum
+              asperiores platea ipsum ad arcu. Nostrud. Aut nostrum, ornare quas
+              provident laoreet nesciunt.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Destination -->
+      <section class="container">
+        <!-- col-1 -->
+        <div class="card1">
+          <div class="mb-[300px]">
+            <button
+              class="ml-[30px] items-center bg-[#F56960] hover:bg-[#2C75BA] px-[30px] py-[10px] text-[15px] text-[#ffffff] mt-[30px]"
+            >
+              THAILAND
+            </button>
+          </div>
+          <div>
+            <p
+              class="text-[23px] hover:text-[#f56960] ml-[30px] font-bold text-[white]"
+            >
+              Disney Land
+            </p>
+          </div>
+        </div>
+
+        <!-- col-2 -->
+        <div class="card1">
+          <div class="mb-[300px]">
+            <button
+              class="ml-[30px] items-center bg-[#F56960] hover:bg-[#2C75BA] px-[30px] py-[10px] text-[15px] text-[#ffffff] mt-[30px]"
+            >
+              NORWAY
+            </button>
+          </div>
+          <div>
+            <p
+              class="text-[23px] ml-[30px] hover:text-[#f56960] font-bold text-[white]"
+            >
+              Disney Land
+            </p>
+          </div>
+        </div>
+
+        <!-- col-3 -->
+        <div>
+          <!-- card-1 -->
+          <div class="card2">
+            <div class="mb-[300px]">
+              <button
+                class="items-center bg-[#F56960] hover:bg-[#2C75BA] px-[30px] py-[10px] text-[15px] text-[#ffffff] mt-[30px] ml-[30px]"
+              >
+                NEW ZEALAND
+              </button>
+            </div>
+            <div>
+              <p
+                class="text-[23px] ml-[30px] pb-[30px] hover:text-[#f56960] font-bold text-[white]"
+              >
+                Oxonian City
+              </p>
+            </div>
+          </div>
+
+          <!-- Card-2 -->
+          <div class="card3">
+            <div class="mb-[300px]">
+              <button
+                class="items-center bg-[#F56960] hover:bg-[#2C75BA] px-[30px] py-[10px] text-[15px] text-[#ffffff] mt-[30px] ml-[30px]"
+              >
+                SINGAPORE
+              </button>
+            </div>
+            <div>
+              <p
+                class="text-[23px] ml-[30px] pb-[30px] hover:text-[#f56960] font-bold text-[white]"
+              >
+                Marina Bay Sand City
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
 </html>
