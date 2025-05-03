@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+
+    <style>
+        /*Accordion*/
+
+/* Accordion Wrapper */
+.custom-accordion {
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: 'Urbanist', sans-serif;
+}
+
+/* Accordion Title */
+.custom-accordion .accordion-item {
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.custom-accordion .accordion-title {
+  background-color: #f9f9f9;
+  cursor: pointer;
+  padding: 15px 20px;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.3s ease;
+}
+
+.custom-accordion .accordion-title:hover {
+  background-color: #eaeaea;
+}
+
+.custom-accordion .accordion-title i {
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate icon when active */
+.custom-accordion .accordion-item.active .accordion-title i {
+  transform: rotate(45deg);
+}
+
+/* Accordion Content */
+.custom-accordion .accordion-content {
+  display: none;
+  padding: 15px 20px;
+  font-size: 16px;
+  line-height: 28px;
+  color: #444;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+}
+
+/* Active Content Display */
+.custom-accordion .accordion-item.active .accordion-content {
+  display: block;
+}
+
+/*Custom Accordion*/
+
+
+
+        
+
+        .accordian-left-header {
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 20.5px;
+            line-height: 31.5px;
+            font-weight: 900;
+            color: #222222;
+
+        }
+
+        .accordian-left-paragraph {
+            font-size: 16px;
+            font-weight: 400;
+            color: #959595;
+        }
+
+        .btn-custom-1 {
+            background-color: #449A3C;
+            color: white;
+            border: none;
+            padding: 23px 50px;
+            display: inline-block;
+            transform: translateX(0);
+            transition: opacity .45s cubic-bezier(.25, 1, .33, 1), transform .45s cubic-bezier(.25, 1, .33, 1);
+            position: relative;
+            letter-spacing: 1px !important;
+            font-size: 18px !important;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        .font-urbanist {
+            font-family: 'Urbanist', sans-serif;
+        }
+
+        /* accordian part start */
+        .accordian-custom {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+
+        .accordion-right-trigger {
+            background-color: #ffffff;
+            font-family: 'Urbanist';
+            line-height:30px;
+            letter-spacing:2px;
+            color: #515151;
+            font-weight: 600;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: left;
+            outline: none;
+            font-size: 20px;
+            transition: 0.4s;
+            border: none;
+            transition: border-color 0.15s ease;
+            text-transform: uppercase;
+            
+        }
+
+        .active {
+            color: #53A34C;
+            border-bottom: none;
+        }
+
+        .accordion-right-trigger:hover {
+            color: #53A34C;
+        }
+
+        .accordion-right-trigger::after {
+            content: '';
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background-color: #777;
+            -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50'%3E%3Cpath fill='%23000' d='M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15'/%3E%3Cpath fill='%23000' d='M16 24h18v2H16z'/%3E%3Cpath fill='%23000' d='M24 16h2v18h-2z'/%3E%3C/svg%3E");
+            mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50'%3E%3Cpath fill='%23000' d='M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15'/%3E%3Cpath fill='%23000' d='M16 24h18v2H16z'/%3E%3Cpath fill='%23000' d='M24 16h2v18h-2z'/%3E%3C/svg%3E");
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-size: cover;
+            mask-size: cover;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .accordion-right-trigger.active::after {
+            /* Change to minus icon */
+            -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50'%3E%3Cpath fill='%23000' d='M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15'/%3E%3Cpath fill='%23000' d='M16 24h18v2H16z'/%3E%3C/svg%3E");
+            mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50'%3E%3Cpath fill='%23000' d='M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15'/%3E%3Cpath fill='%23000' d='M16 24h18v2H16z'/%3E%3C/svg%3E");
+        }
+
+
+        .panel {
+            padding: 0px 18px;
+            background-color: white;
+            max-height: 0;
+            font-size: 16px;
+            font-weight: 400;
+            overflow: hidden;
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+            transition: max-height 0.3s ease-in-out, border-color 0.10s ease;
+
+        }
+
+        .panel div h1 {
+            font-size: 15px;
+            font-weight: 900;
+            color: #0e0e0e;
+        }
+
+        .panel div p {
+            font-size: 15px;
+            font-weight: 400;
+            color: #817f7f;
+        }
+
+        .panel div p a {
+            font-size: 15px;
+            font-weight: 400;
+            color: #817f7f;
+        }
+
+        .panel div p a:hover {
+            text-decoration-color: #53A34C;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <section>
+            <div class="accordian-custom font-urbanist">
+              <!-- right -->
+              <div class="right-side">
+          
+                <button class="accordion-right-trigger">কম্পিটার সম্পর্কে ধারণা</button>
+                <div class="panel">
+                  <div>
+                    <p>Yes. Your cart will need very minimal service, but the small things you do now will prolong the life of your cart.</p>
+                  </div>
+                </div>
+          
+                <button class="accordion-right-trigger">হোম মেনু</button>
+                <div class="panel">
+                  <div>
+                    <p><strong>Daily:</strong> Charge batteries fully.</p>
+                    <p><strong>Weekly:</strong></p>
+                    <ul>
+                      <li>Checking tire pressure (24 PSI for Lifted &amp; 30 PSI for Non-Lifted carts)</li>
+                      <li>Check all lights (headlights, taillights, turn signals)</li>
+                      <li>Horn operation</li>
+                    </ul>
+                    <p><strong>Monthly:</strong></p>
+                    <ul>
+                      <li>Check and fill battery water levels (serviceable batteries only, distilled water only)</li>
+                      <li>Clean battery terminals of corrosion and apply anti-corrosive spray/gel</li>
+                      <li>Tighten battery terminal connections (95–100 in. lbs)</li>
+                    </ul>
+                    <p><strong>Yearly:</strong> Schedule your yearly service with your ICON dealer for critical fluid changes, greasing the front end and serviceable fittings, electrical checks, overall inspection, and tire rotation.</p>
+                  </div>
+                </div>
+          
+                <button class="accordion-right-trigger">What size socket do I need to remove lug-nuts from tires?</button>
+                <div class="panel">
+                  <div>
+                    <p>A 19mm or a 3/4 socket will work to remove your lug nuts.</p>
+                  </div>
+                </div>
+          
+                <button class="accordion-right-trigger">What is the bolt pattern of my wheel?</button>
+                <div class="panel">
+                  <div>
+                    <p>The ICON bolt pattern is a 4X4. <strong>4-bolt</strong> patterns are measured in a straight line from center to center of two bolt holes sitting directly across from each other.</p>
+                  </div>
+                </div>
+          
+                <button class="accordion-right-trigger">What size/thread are my lug studs?</button>
+                <div class="panel">
+                  <div>
+                    <p>The thread of the lug studs is a standard size: 1/2X20.</p>
+                  </div>
+                </div>
+          
+                <button class="accordion-right-trigger">What is the torque specification for my lug nuts?</button>
+                <div class="panel">
+                  <div>
+                    <p>Lug nuts should be torqued to 55–65 FT LBS. They should also be tightened in proper sequence.</p>
+                  </div>
+                </div>
+          
+                <button class="accordion-right-trigger">Do all ICON®'s have the same key?</button>
+                <div class="panel">
+                  <div>
+                    <p>Yes. All ICONs come standard with a universal ignition. However, a unique key option is available through your dealer.</p>
+                  </div>
+                </div>
+          
+                <button class="accordion-right-trigger">Can I lift or lower my cart?</button>
+                <div class="panel">
+                  <div>
+                    <p>No. Currently there is no way to lift or lower carts beyond the original configuration. The frame structures of the lifted and non-lifted carts differ, making parts non-interchangeable. Changing tire size may affect ride height, but suspension height remains unchanged.</p>
+                  </div>
+                </div>
+          
+                <button class="accordion-right-trigger">My cart is charged, but my gauge doesn’t read 100%.</button>
+                <div class="panel">
+                  <div>
+                    <p>The first step is to try resetting the cluster. If that doesn’t work, contact your dealer for a replacement unit.</p>
+                    <p><strong>Cluster Reset Procedure:</strong></p>
+                    <ul>
+                      <li>With the key OFF, plug in the charge cord and wait for the charge indicator to turn green.</li>
+                      <li>Wait 10 seconds, turn the key ON, wait 10 seconds, then turn the key OFF.</li>
+                      <li>Unplug the cart and turn the key ON. The gauge should reset to 100%.</li>
+                      <li>If this doesn’t work, contact your dealer to replace the gauge cluster.</li>
+                    </ul>
+                  </div>
+                </div>
+          
+              </div>
+            </div>
+          </section>
+          
+    </section>
+
+    <!-- script -->
+     <script>
+        var acc = document.getElementsByClassName("accordion-right-trigger");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+        // First, close all other panels
+        for (var j = 0; j < acc.length; j++) {
+            if (acc[j] !== this) {
+                acc[j].classList.remove("active");
+                var otherPanel = acc[j].nextElementSibling;
+                otherPanel.style.maxHeight = null;
+            }
+        }
+
+        // Toggle this one
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+    });
+}
+     </script>
+</body>
+</html>
